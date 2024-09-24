@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Menu() {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   return (
-    <div className="px-6 md:px-0 py-6 sticky top-0 z-50 bg-white w-full">
+    <div className="px-6 md:px-0 py-6 sticky top-0 z-50 bg-white w-full text-sm md:text-base">
       <div className="flex w-full items-center">
         <button
           className="-ml-4 md:hidden w-1/3"

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 
 import ProductCard from "../components/ProductCard";
 import Menu from "@/components/ui/Menu";
+import ProductsPanel from "@/components/ProductsPanel";
 
 const productImage = [
   "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
@@ -16,6 +17,63 @@ const productImage = [
   "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0528.jpg?v=1713947074",
   "https://creme-atelier.com/cdn/shop/files/Cable_1646x.jpg?v=1713966417",
 ];
+
+const productsPanel = [
+  {
+    productBrand: "Bose",
+    productTitle: "Noise Cancelling Headphones 700",
+    productPrice: 299,
+    productDescription:
+      "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
+    productImage:
+      "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
+  },
+  {
+    productBrand: "Bose",
+    productTitle: "Noise Cancelling Headphones 700",
+    productPrice: 299,
+    productDescription:
+      "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
+    productImage:
+      "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
+  },
+  {
+    productBrand: "Bose",
+    productTitle: "Noise Cancelling Headphones 700",
+    productPrice: 299,
+    productDescription:
+      "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
+    productImage:
+      "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
+  },
+  {
+    productBrand: "Bose",
+    productTitle: "Noise Cancelling Headphones 700",
+    productPrice: 299,
+    productDescription:
+      "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
+    productImage:
+      "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
+  },
+  {
+    productBrand: "Bose",
+    productTitle: "Noise Cancelling Headphones 700",
+    productPrice: 299,
+    productDescription:
+      "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
+    productImage:
+      "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
+  },
+  {
+    productBrand: "Bose",
+    productTitle: "Noise Cancelling Headphones 700",
+    productPrice: 299,
+    productDescription:
+      "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
+    productImage:
+      "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
+  },
+];
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +81,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="md:px-10 lg:px-24 flex flex-col items-center space-y-16">
+      <body className="md:px-10 lg:px-12 xl:px-12 2xl:px-24 flex flex-col items-center md:space-y-16">
         <Menu />
         <ProductCard
           productBrand="Bose"
@@ -32,7 +90,8 @@ export default function RootLayout({
           productDescription="The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive."
           productImage={productImage}
         />
-
+        <h1 className="text-6xl">Related</h1>
+        <ProductsPanel productsPanel={productsPanel} />
         {children}
       </body>
     </html>
