@@ -1,57 +1,79 @@
 "use client";
 import { Fade as Hamburger } from "hamburger-react";
+import { useState } from "react";
 
 export default function Menu() {
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
   return (
     <div className="px-6 md:px-0 py-6 sticky top-0 z-50 bg-white w-full">
       <div className="flex w-full items-center">
-        <details className="md:hidden w-1/3 ">
-          <summary className="flex items-center cursor-pointer -ml-4">
-            <Hamburger size={15} />
-          </summary>
-
-          <ul className="flex flex-col space-y-5 absolute left-0 w-screen h-screen px-6 bg-white tracking-wider pt-10 text-3xl">
-            <li>
-              <a href="#">All</a>
-            </li>
-            <li>
-              <a href="#">Tech</a>
-            </li>
-            <li>
-              <a href="#">Decoration</a>
-            </li>
-            <li>
-              <a href="#">Lamp</a>
-            </li>
-            <li>
-              <a href="#" className="text-lg">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-lg">
-                Instragram
-              </a>
-            </li>
-          </ul>
-        </details>
-
+        <button
+          className="-ml-4 md:hidden w-1/3"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Hamburger size={15} />
+        </button>
         <div className=" w-1/3 flex-row space-x-6 hidden md:flex">
-          <a href="#">Buy</a>
-          <a href="#">Science</a>
-          <a href="#">FAQs</a>
-          <a href="#">Futur</a>
-          <a href="#">About</a>
+          <a href="#">All</a>
+          <a href="#">Tech</a>
+          <a href="#">Decoration</a>
+          <a href="#">Lamp</a>
+          <a href="#">Instagram</a>
         </div>
 
         <div className="flex-grow text-center w-1/3">
           <a href="#">LOGO</a>
         </div>
-
-        <a href="#" className="w-1/3 text-end">
+        <a href="#" className={`w-1/3 text-end ${isOpen ? "opacity-0" : ""}`}>
           Panier
         </a>
       </div>
+      {isOpen && (
+        <div className="bg-white flex flex-col w-full absolute left-0 px-6 h-screen space-y-6 mt-6">
+          <a
+            href="#"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text tracking-wider"
+          >
+            All
+          </a>
+          <a
+            href="#"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text tracking-wider"
+          >
+            Tech
+          </a>
+          <a
+            href="#"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text tracking-wider"
+          >
+            Decoration
+          </a>
+          <a
+            href="#"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-3xl text tracking-wider"
+          >
+            Lamp
+          </a>
+          <a
+            href="#"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-xl text tracking-wide"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-xl text tracking-wide"
+          >
+            Instagram
+          </a>
+        </div>
+      )}
     </div>
   );
 }
