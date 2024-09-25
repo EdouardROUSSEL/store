@@ -1,4 +1,6 @@
+import ProductCarousel from "@/components/ProductCarousel";
 import ProductsList from "../../products.json";
+import { Product } from "@/app/types";
 
 interface ProductParams {
   params: {
@@ -15,8 +17,7 @@ const ProductPage = ({ params }: ProductParams) => {
 
   return (
     <div>
-      <h1>Page</h1>
-      <p>Marque: {product.productBrand}</p>
+      <ProductCarousel product={product as Product} />
     </div>
   );
 };

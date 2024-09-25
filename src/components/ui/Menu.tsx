@@ -1,12 +1,36 @@
 "use client";
 import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Menu() {
-  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrollingDown, setScrollingDown] = useState<boolean>(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    if (typeof window !== "undefined") {
+      const currentScrollY = window.scrollY;
+      // Vérifie si l'utilisateur défile vers le bas
+      setScrollingDown(currentScrollY > lastScrollY && currentScrollY > 50); // Ajoute un seuil pour éviter les petites transitions
+      setLastScrollY(currentScrollY);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="px-6 md:px-0 py-6 sticky top-0 z-50 bg-white w-full text-sm md:text-base">
+    <div
+      className={`px-6 md:px-0 py-6 sticky top-0 z-50 bg-white w-full text-sm md:text-base 
+      transition-transform duration-300 transform ${
+        scrollingDown ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="flex w-full items-center">
         <button
           className="-ml-4 md:hidden w-1/3"
@@ -14,7 +38,7 @@ export default function Menu() {
         >
           <Hamburger size={15} />
         </button>
-        <div className=" w-1/3 flex-row space-x-6 hidden md:flex">
+        <div className="w-1/3 flex-row space-x-6 hidden md:flex">
           <Link href="/category/all">All</Link>
           <Link href="/category/tech">Tech</Link>
           <Link href="/category/decoration">Decoration</Link>
