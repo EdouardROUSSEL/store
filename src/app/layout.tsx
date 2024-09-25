@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Menu from "@/components/ui/Menu";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="md:px-10 lg:px-12 xl:px-12 2xl:px-24">{children}</body>
+      <body className="md:px-10 lg:px-12 xl:px-12 2xl:px-24">
+        <Menu />
+        {children}
+      </body>
     </html>
   );
 }

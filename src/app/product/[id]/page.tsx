@@ -10,7 +10,6 @@ const ProductPage = ({ params }: ProductParams) => {
   const { id } = params;
 
   const product = ProductsList.find((product) => product.pageLink === id);
-  console.log(id);
 
   if (!product) return <div>Produit non trouvé</div>;
 

@@ -1,74 +1,31 @@
-"use client";
-import React from "react";
-import Button from "./Button";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/Carousel";
-import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-Fade";
-
-type ProductCardProps = {
-  productBrand: string;
-  productTitle: string;
-  productPrice: number;
-  productDescription: string;
-  productImage: string[];
-};
+import { Product } from "@/app/types";
+import { useRouter } from "next/navigation";
 
 export default function ProductCard({
-  productBrand,
-  productTitle,
-  productPrice,
-  productDescription,
-  productImage,
-}: ProductCardProps) {
+  product,
+  flexMobil,
+}: {
+  product: Product;
+  flexMobil: boolean;
+}) {
+  const router = useRouter();
   return (
-    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none font-roboto md:space-y-none sm:space-y-8 ">
-      <Carousel
-        className="md:w-1/2 w-full"
-        opts={{
-          loop: true,
-        }}
-        plugins={[
-          Fade({ active: true }),
-          Autoplay({
-            delay: 5000,
-            stopOnMouseEnter: true,
-            stopOnInteraction: false,
-            stopOnFocusIn: false,
-          }),
-        ]}
-      >
-        <CarouselContent className=" aspect-square">
-          {productImage.map((link, index) => (
-            <CarouselItem key={index}>
-              <img
-                alt={"image " + index}
-                src={link}
-                className="object-cover md:rounded-3xl w-full h-full"
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
-
-      <div className="md:w-1/2">
-        <div className="xl:pl-16 md:p-none md:pl-12 p-3 xl:max-w-[35rem] md:max-w-[29rem] md:mx-auto">
-          <div className="xl:text-2xl md:text-xl text-lg pb-1">
-            {productBrand}
-          </div>
-          <div className="font-medium md:text-4xl xl:text-5xl text-3xl">
-            {productTitle}
-          </div>
-          <div className="md:text-xl xl:text-2xl text-lg font-normal pt-4 pb-6">
-            ${productPrice}
-          </div>
-          <div className="flex flex-col-reverse  md:flex-col space-y-8 space-y-reverse md:space-y-8">
-            <div className=" md:text-lg xl:text-xl text-base">
-              {productDescription}
-            </div>
-            <Button content="Order" />
-          </div>
-        </div>
+    <a
+      className={`flex space-y-4 flex-col  sm:min-w-0 sm:max-w-full sm:pr-0 cursor-pointer ${
+        flexMobil ? "min-w-[64vw] max-w-md pr-6" : " min-w-0 max-w-full "
+      }`}
+      onClick={() => router.push(`/product/${product.pageLink}`)}
+    >
+      <img
+        src={product.productImage[0]}
+        className="aspect-square rounded-3xl"
+        alt={product.productTitle}
+      />
+      <div>
+        <p className="font-wider font-light">{product.productBrand}</p>
+        <p>{product.productTitle}</p>
+        <p>${product.productPrice}</p>
       </div>
-    </div>
+    </a>
   );
 }

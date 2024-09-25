@@ -1,8 +1,5 @@
-// types.ts
-type Category = "Decoration" | "Lamp" | "Tech";
-
 export interface Product {
-  category: Category;
+  category: "decoration" | "lamp" | "tech";
   pageLink: string;
   productBrand: string;
   productTitle: string;
@@ -11,6 +8,4 @@ export interface Product {
   productImage: string[];
 }
 
-export interface ProductListTypes {
-  productsList: Product[];
-}
+export type ProductListTypes = Product[];

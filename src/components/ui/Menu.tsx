@@ -16,15 +16,15 @@ export default function Menu() {
         </button>
         <div className=" w-1/3 flex-row space-x-6 hidden md:flex">
           <Link href="/category/all">All</Link>
-          <Link href="/category//tech">Tech</Link>
-          <Link href="/category//decoration">Decoration</Link>
-          <Link href="/category//lamp">Lamp</Link>
-          <Link href="/category//about">About</Link>
+          <Link href="/category/tech">Tech</Link>
+          <Link href="/category/decoration">Decoration</Link>
+          <Link href="/category/lamp">Lamp</Link>
+          <Link href="/about">About</Link>
           <Link href="#">Instagram</Link>
         </div>
 
         <div className="flex-grow text-center w-1/3">
-          <Link href="#">LOGO</Link>
+          <Link href="/">LOGO</Link>
         </div>
         <Link
           href="#"
@@ -36,28 +36,28 @@ export default function Menu() {
       {isOpen && (
         <div className="bg-white flex flex-col w-full absolute left-0 px-6 h-screen space-y-6 mt-6">
           <Link
-            href="/all"
+            href="/category/all"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             All
           </Link>
           <Link
-            href="/tech"
+            href="/category/tech"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             Tech
           </Link>
           <Link
-            href="/decortion"
+            href="/category/decoration"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             Decoration
           </Link>
           <Link
-            href="/lamp"
+            href="/category/lamp"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
