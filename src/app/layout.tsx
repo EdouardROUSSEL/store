@@ -20,6 +20,7 @@ const productImage = [
 
 const productsPanel = [
   {
+    pageLink: "page1",
     productBrand: "Bose",
     productTitle: "Noise Cancelling Headphones 700",
     productPrice: 299,
@@ -29,6 +30,7 @@ const productsPanel = [
       "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
   },
   {
+    pageLink: "page1",
     productBrand: "Bose",
     productTitle: "Noise Cancelling Headphones 700",
     productPrice: 299,
@@ -38,6 +40,7 @@ const productsPanel = [
       "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
   },
   {
+    pageLink: "page1",
     productBrand: "Bose",
     productTitle: "Noise Cancelling Headphones 700",
     productPrice: 299,
@@ -47,6 +50,7 @@ const productsPanel = [
       "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
   },
   {
+    pageLink: "page1",
     productBrand: "Bose",
     productTitle: "Noise Cancelling Headphones 700",
     productPrice: 299,
@@ -56,6 +60,7 @@ const productsPanel = [
       "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
   },
   {
+    pageLink: "page1",
     productBrand: "Bose",
     productTitle: "Noise Cancelling Headphones 700",
     productPrice: 299,
@@ -65,6 +70,7 @@ const productsPanel = [
       "https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072",
   },
   {
+    pageLink: "page1",
     productBrand: "Bose",
     productTitle: "Noise Cancelling Headphones 700",
     productPrice: 299,
