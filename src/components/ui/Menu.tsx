@@ -1,5 +1,6 @@
 "use client";
 import { Fade as Hamburger } from "hamburger-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Menu() {
@@ -14,64 +15,68 @@ export default function Menu() {
           <Hamburger size={15} />
         </button>
         <div className=" w-1/3 flex-row space-x-6 hidden md:flex">
-          <a href="#">All</a>
-          <a href="#">Tech</a>
-          <a href="#">Decoration</a>
-          <a href="#">Lamp</a>
-          <a href="#">Instagram</a>
+          <Link href="/category/all">All</Link>
+          <Link href="/category//tech">Tech</Link>
+          <Link href="/category//decoration">Decoration</Link>
+          <Link href="/category//lamp">Lamp</Link>
+          <Link href="/category//about">About</Link>
+          <Link href="#">Instagram</Link>
         </div>
 
         <div className="flex-grow text-center w-1/3">
-          <a href="#">LOGO</a>
+          <Link href="#">LOGO</Link>
         </div>
-        <a href="#" className={`w-1/3 text-end ${isOpen ? "opacity-0" : ""}`}>
+        <Link
+          href="#"
+          className={`w-1/3 text-end ${isOpen ? "opacity-0" : ""}`}
+        >
           Panier
-        </a>
+        </Link>
       </div>
       {isOpen && (
         <div className="bg-white flex flex-col w-full absolute left-0 px-6 h-screen space-y-6 mt-6">
-          <a
-            href="#"
+          <Link
+            href="/all"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             All
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/tech"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             Tech
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/decortion"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             Decoration
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/lamp"
             onClick={() => setIsOpen(!isOpen)}
             className="text-3xl text tracking-wider"
           >
             Lamp
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/about"
             onClick={() => setIsOpen(!isOpen)}
             className="text-xl text tracking-wide"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             onClick={() => setIsOpen(!isOpen)}
             className="text-xl text tracking-wide"
           >
             Instagram
-          </a>
+          </Link>
         </div>
       )}
     </div>
