@@ -9,6 +9,7 @@ export default function ProductsPanel({
 }: {
   productsList: ProductListTypes;
   flexMobil?: boolean;
+  colNumber?: number;
 }) {
   return (
     <div className={`w-full px-6 md:px-0 ${flexMobil ?? "overflow-x-scroll "}`}>

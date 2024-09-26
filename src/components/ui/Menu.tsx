@@ -26,14 +26,14 @@ export default function Menu() {
 
   return (
     <div
-      className={`px-6 md:px-0 py-6 sticky top-0 z-50 bg-white w-full text-sm md:text-base 
+      className={`md:px-12 px-6 md:py-8 py-2 sticky top-0 z-50 bg-white w-full text-sm md:text-base items-center
       transition-transform duration-300 transform ${
         scrollingDown ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       <div className="flex w-full items-center">
         <button
-          className="-ml-4 md:hidden w-1/3"
+          className="-ml-4 md:hidden w-1/3 "
           onClick={() => setIsOpen(!isOpen)}
         >
           <Hamburger size={15} />
@@ -58,7 +58,7 @@ export default function Menu() {
         </Link>
       </div>
       {isOpen && (
-        <div className="bg-white flex flex-col w-full absolute left-0 px-6 h-screen space-y-6 mt-6">
+        <div className="bg-white flex flex-col w-full absolute left-0 px-6 h-screen space-y-6 mt-2">
           <Link
             href="/category/all"
             onClick={() => setIsOpen(!isOpen)}
