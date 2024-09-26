@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 export default function Footer() {
   return (
     <footer className="bg-gray-200 rounded-3xl w-full mb-6 p-6 flex text-sm justify-between">

@@ -1,6 +1,6 @@
 "use client";
 
-import { Product, ProductListTypes } from "@/app/types";
+import { ProductListTypes } from "@/app/types";
 import ProductCard from "./ProductCard";
 
 export default function ProductsPanel({
