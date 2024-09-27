@@ -57,12 +57,12 @@ export default function Page() {
           <Button content="Tout découvrir" />
         </Link>
       </section>
-      <section className="md:flex md:gap-6 h-screen ">
+      <section className="md:flex flex flex-col md:flex-row md:gap-6 h-screen ">
         <img
           src="https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0528.jpg?v=1713947074"
-          className=" w-2/3 col-span-2 rounded-3xl object-cover aspect-square h-2/3"
+          className=" md:w-2/3  rounded-3xl object-cover aspect-square h-2/3"
         />
-        <div className="space-y-2 w-1/3 overflow-y-scroll h-2/3">
+        <div className="space-y-2 md:w-1/3 overflow-y-scroll h-2/3">
           {FAQ.map((data, index) => (
             <FAQCard
               key={index}

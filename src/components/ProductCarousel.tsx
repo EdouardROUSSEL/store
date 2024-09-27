@@ -26,7 +26,7 @@ export default function ProductCarousel({ product }: { product: Product }) {
         ]}
       >
         <CarouselContent className=" aspect-square">
-          {product.productImage.map((imageSRC, index: number) => (
+          {product.productImage.map((imageSRC, index) => (
             <CarouselItem key={index}>
               <img
                 alt={"image " + index}

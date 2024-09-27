@@ -1,57 +1,167 @@
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+
+interface Subtitle {
+  title: string;
+  path: string;
+}
+
+interface FooterSection {
+  title: string;
+  subtitle: Subtitle[];
+}
+
+const footerData: FooterSection[] = [
+  {
+    title: "shop",
+    subtitle: [
+      { title: "Essentiel", path: "/#" },
+      { title: "Pré-commande", path: "/#" },
+    ],
+  },
+  {
+    title: "histoire",
+    subtitle: [
+      { title: "Science", path: "/#" },
+      { title: "FAQs", path: "/#" },
+      { title: "A propos", path: "/#" },
+    ],
+  },
+  {
+    title: "aide",
+    subtitle: [
+      { title: "Nos points de vente", path: "/#" },
+      { title: "Conditions générales de vente", path: "/#" },
+      { title: "Collaboration", path: "/#" },
+      { title: "Livraisons et retours", path: "/#" },
+    ],
+  },
+  {
+    title: "contact",
+    subtitle: [
+      { title: "Test 1", path: "/#" },
+      { title: "Test 1", path: "/#" },
+      { title: "Test 1", path: "/#" },
+    ],
+  },
+  {
+    title: "suivez-nous",
+    subtitle: [
+      { title: "Test 1", path: "/#" },
+      { title: "Test 1", path: "/#" },
+      { title: "Test 1", path: "/#" },
+    ],
+  },
+];
+
 export default function Footer() {
+  const section1Data = footerData.filter((data) =>
+    ["histoire", "aide", "shop"].includes(data.title)
+  );
+
+  const section2Data = footerData.filter((data) =>
+    ["contact", "suivez-nous"].includes(data.title)
+  );
+
   return (
-    <footer className="bg-gray-200 rounded-3xl w-full mb-6 p-6 flex text-sm justify-between">
-      <div className="flex w-1/2 space-x-8 justify-around tracking-widest">
-        <div className="space-y-2">
-          <p>SHOP</p>
-          <div className="text-xs space-y-[1px]">
-            <p>text 1</p>
-            <p>text 2</p>
-            <p>text 3</p>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <p>STORY</p>
-          <div className="text-xs space-y-[1px]">
-            <p>text 1</p>
-            <p>text 2</p>
-            <p>text 3</p>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <p>POLICY</p>
-          <div className="text-xs space-y-[1px]">
-            <p>text 1</p>
-            <p>text 2</p>
-            <p>text 3</p>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <p>CONTACT</p>
-          <div className="text-xs space-y-[1px]">
-            <p>text 1</p>
-            <p>text 2</p>
-            <p>text 3</p>
-          </div>
-        </div>
-      </div>
-      <div className="w-1/2 justify-end flex">
-        <form className="w-3/4 flex flex-col space-y-2">
-          <label>
-            JOIN OUR COMMUNITY—EMBRACE THE HARMONY OF NATURE & SCIENCE
+    <footer className="bg-gray-200 rounded-3xl w-full mb-6 p-6 flex-col lg:flex-row flex text-sm justify-around">
+      <Section sectionData={section1Data} />
+      <div className="lg:w-1/4 w-full flex flex-col space-y-1 mb-6 lg:mb-0">
+        <form className="flex flex-col space-y-2">
+          <label className="tracking-widest px-3">
+            SIGN UP AND GET UPDATE ON NEW PRODUCT
           </label>
-          <div className="w-full">
+          <div className="w-full h-10text-xs border flex">
             <input
               placeholder="email"
               type="email"
-              className="p-2 rounded-s-xl w-3/4 bg-gray-100"
+              className="p-3 rounded-s-xl w-10/12 h-full outline-none"
             ></input>
-            <button className="p-2 px-4 bg-gray-600 text-white rounded-e-xl">
-              Valider
+            <button className=" px-4 text-white rounded-e-xl bg-white h-full w-2/12 items-center justify-end flex">
+              <FaArrowRight className="fill-black" />
             </button>
           </div>
         </form>
+        <p className="text-xs font-light px-3">
+          En continuant, vous acceptez nos conditions générales et notre
+          politique de confidentialité.
+        </p>
+      </div>
+      <Section sectionData={section2Data} logo={true} />
+      <div className="flex flex-col lg:hidden px-3 divide-y divide-black">
+        <div className="w-full h-0 bg-black"></div>
+        {footerData.map((data, index) => (
+          <MenuDrop question={data.title} reponse={data.subtitle} key={index} />
+        ))}
+        <div className="w-full h-0 bg-black"></div>
       </div>
     </footer>
+  );
+}
+
+function MenuDrop({
+  question,
+  reponse,
+}: {
+  question: string;
+  reponse: Subtitle[];
+}) {
+  return (
+    <details className=" group/details [&_svg]:open:-rotate-180 py-2 flex space-y-2 text-xs">
+      <summary className="flex cursor-pointer list-none justify-between items-center [&::-webkit-details-marker]:hidden ">
+        <p className="uppercase ">{question}</p>
+        <svg
+          fill="#000000"
+          height="10px"
+          width="10px"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 330 330"
+        >
+          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+          <g id="SVGRepo_tracerCarrier"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              id="XMLID_225_"
+              d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+            ></path>
+          </g>
+        </svg>
+      </summary>
+      <div className="">
+        {reponse.map((data, index) => (
+          <Link href={data.path} key={index}>
+            <article className=" py-[2px]">{data.title}</article>
+          </Link>
+        ))}
+      </div>
+    </details>
+  );
+}
+
+function Section({
+  sectionData,
+  logo = false,
+}: {
+  sectionData: FooterSection[];
+  logo?: boolean;
+}) {
+  return (
+    <div className="w-1/4 tracking-widest lg:flex hidden">
+      {sectionData.map((data, index) => (
+        <div className="space-y-2 w-1/3" key={index}>
+          <p className="uppercase">{data.title}</p>
+          <div className="text-xs space-y-1 flex flex-col">
+            {data.subtitle.map((subtitleData, subIndex) => (
+              <Link href={subtitleData.path} key={subIndex}>
+                <p>{subtitleData.title}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
+      {logo && <div>Logo</div>}
+    </div>
   );
 }
