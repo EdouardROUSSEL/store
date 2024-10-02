@@ -16,11 +16,19 @@ export default function ProductCard({
       }`}
       onClick={() => router.push(`/product/${product.pageLink}`)}
     >
-      <img
-        src={product.productImage[0]}
-        className="aspect-square rounded-3xl"
-        alt={product.productTitle}
-      />
+      <div className="relative">
+        <img
+          src={product.productImage[0]}
+          className="aspect-square rounded-3xl transition-transform duration-300 hover:opacity-0 transform object-cover "
+          alt={product.productTitle}
+        />
+        <img
+          src={product.productImage[1]}
+          className="aspect-square rounded-3xl top-0 left-0 absolute transition-opacity duration-300 opacity-0 object-cover transform hover:opacity-100"
+          alt={product.productTitle}
+        />
+      </div>
+
       <div>
         <p className="font-wider font-light">{product.productBrand}</p>
         <p>{product.productTitle}</p>

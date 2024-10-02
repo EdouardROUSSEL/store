@@ -3,11 +3,11 @@
 import { ProductListTypes } from "@/app/types";
 import ProductCard from "./ProductCard";
 
-export default function ProductsPanel({
-  productsList,
+export default function RelatedProductsPanel({
+  relatedProductList,
   flexMobil = false,
 }: {
-  productsList: ProductListTypes;
+  relatedProductList: ProductListTypes;
   flexMobil?: boolean;
   colNumber?: number;
 }) {
@@ -20,7 +20,7 @@ export default function ProductsPanel({
             : "sm:grid-cols-3 grid-cols-2 grid gap-y-8 sm:gap-x-6 gap-x-4 "
         }`}
       >
-        {productsList.map((product, index) => (
+        {relatedProductList.map((product, index) => (
           <ProductCard key={index} product={product} flexMobil={flexMobil} />
         ))}
       </div>

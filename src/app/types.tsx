@@ -9,3 +9,13 @@ export interface Product {
 }
 
 export type ProductListTypes = Product[];
+
+export interface Subtitle {
+  title: string;
+  path: string;
+}
+
+export interface FooterSection {
+  title: string;
+  subtitle: Subtitle[];
+}

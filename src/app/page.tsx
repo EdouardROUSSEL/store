@@ -1,7 +1,10 @@
 import Button from "@/components/Button";
 import FAQCard from "@/components/FAQCard";
 import Link from "next/link";
-import FAQ from "./Faq.json";
+import FAQ from "../app/data/FAQ.json";
+import Products from "./data/Products.json";
+import { ProductListTypes } from "./types";
+import CategoryPanelCard from "@/components/RelatedCard";
 
 export default function Page() {
   return (
@@ -18,41 +21,9 @@ export default function Page() {
         <p>blablabla</p>
       </section>
       <section className="space-x-10">
-        <div className="md:grid md:grid-cols-3 gap-y-8 gap-x-6 space-y-4 md:space-y-0">
-          <div
-            className="h-full rounded-3xl items-end justify-end flex p-6 aspect-square"
-            style={{
-              backgroundImage: `url(https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0743_MELLAN_SLADD.jpg?v=1713723072)`,
-              backgroundSize: "cover",
-            }}
-          >
-            <Link href="/category/all">
-              <Button content="Découvrir les lampes" />
-            </Link>
-          </div>
-          <div
-            className="h-full rounded-3xl items-end justify-end flex p-6 aspect-square"
-            style={{
-              backgroundImage: `url(https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0552.jpg?v=1713723043)`,
-              backgroundSize: "cover",
-            }}
-          >
-            <Link href="/category/all">
-              <Button content="Découvrir la décoration" />
-            </Link>
-          </div>
-          <div
-            className="h-full rounded-3xl items-end justify-end flex p-6 aspect-square"
-            style={{
-              backgroundImage: `url(https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0528.jpg?v=1713947074)`,
-              backgroundSize: "cover",
-            }}
-          >
-            <Link href="/category/all">
-              <Button content="Découvrir les accéssoirs tech" />
-            </Link>
-          </div>
-        </div>
+        <CategoryPanelCard
+          relatedProductList={Products.slice(0, 3) as ProductListTypes}
+        />
         <Link href="/category/all">
           <Button content="Tout découvrir" />
         </Link>

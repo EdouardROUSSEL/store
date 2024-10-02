@@ -1,0 +1,41 @@
+[
+  {
+    "title": "shop",
+    "subtitle": [
+      { "title": "Essentiel", "path": "/#" },
+      { "title": "Pré-commande", "path": "/#" }
+    ]
+  },
+  {
+    "title": "histoire",
+    "subtitle": [
+      { "title": "Science", "path": "/#" },
+      { "title": "FAQs", "path": "/#" },
+      { "title": "A propos", "path": "/#" }
+    ]
+  },
+  {
+    "title": "aide",
+    "subtitle": [
+      { "title": "Nos points de vente", "path": "/#" },
+      { "title": "Conditions générales de vente", "path": "/#" },
+      { "title": "Livraisons et retours", "path": "/#" }
+    ]
+  },
+  {
+    "title": "contact",
+    "subtitle": [
+      { "title": "Test 1", "path": "/#" },
+      { "title": "Test 1", "path": "/#" },
+      { "title": "Test 1", "path": "/#" }
+    ]
+  },
+  {
+    "title": "suivez-nous",
+    "subtitle": [
+      { "title": "Test 1", "path": "/#" },
+      { "title": "Test 1", "path": "/#" },
+      { "title": "Test 1", "path": "/#" }
+    ]
+  }
+]

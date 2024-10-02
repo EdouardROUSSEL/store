@@ -1,65 +1,14 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-
-interface Subtitle {
-  title: string;
-  path: string;
-}
-
-interface FooterSection {
-  title: string;
-  subtitle: Subtitle[];
-}
-
-const footerData: FooterSection[] = [
-  {
-    title: "shop",
-    subtitle: [
-      { title: "Essentiel", path: "/#" },
-      { title: "Pré-commande", path: "/#" },
-    ],
-  },
-  {
-    title: "histoire",
-    subtitle: [
-      { title: "Science", path: "/#" },
-      { title: "FAQs", path: "/#" },
-      { title: "A propos", path: "/#" },
-    ],
-  },
-  {
-    title: "aide",
-    subtitle: [
-      { title: "Nos points de vente", path: "/#" },
-      { title: "Conditions générales de vente", path: "/#" },
-      { title: "Collaboration", path: "/#" },
-      { title: "Livraisons et retours", path: "/#" },
-    ],
-  },
-  {
-    title: "contact",
-    subtitle: [
-      { title: "Test 1", path: "/#" },
-      { title: "Test 1", path: "/#" },
-      { title: "Test 1", path: "/#" },
-    ],
-  },
-  {
-    title: "suivez-nous",
-    subtitle: [
-      { title: "Test 1", path: "/#" },
-      { title: "Test 1", path: "/#" },
-      { title: "Test 1", path: "/#" },
-    ],
-  },
-];
+import FooterData from "../app/data/FooterData.json";
+import { FooterSection, Subtitle } from "@/app/types";
 
 export default function Footer() {
-  const section1Data = footerData.filter((data) =>
+  const section1Data = FooterData.filter((data: FooterSection) =>
     ["histoire", "aide", "shop"].includes(data.title)
   );
 
-  const section2Data = footerData.filter((data) =>
+  const section2Data = FooterData.filter((data: FooterSection) =>
     ["contact", "suivez-nous"].includes(data.title)
   );
 
@@ -71,7 +20,7 @@ export default function Footer() {
           <label className="tracking-widest px-3">
             SIGN UP AND GET UPDATE ON NEW PRODUCT
           </label>
-          <div className="w-full h-10text-xs border flex">
+          <div className="w-full h-10 xtext-xs border flex">
             <input
               placeholder="email"
               type="email"
@@ -90,7 +39,7 @@ export default function Footer() {
       <Section sectionData={section2Data} logo={true} />
       <div className="flex flex-col lg:hidden px-3 divide-y divide-black">
         <div className="w-full h-0 bg-black"></div>
-        {footerData.map((data, index) => (
+        {FooterData.map((data, index) => (
           <MenuDrop question={data.title} reponse={data.subtitle} key={index} />
         ))}
         <div className="w-full h-0 bg-black"></div>

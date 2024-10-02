@@ -1,6 +1,9 @@
 import ProductCarousel from "@/components/ProductCarousel";
-import ProductsList from "../../products.json";
-import { Product } from "@/app/types";
+import ProductsList from "../../data/Products.json";
+import { Product, ProductListTypes } from "@/app/types";
+import RelatedProductsPanel from "@/components/ProductsPanel";
+import Link from "next/link";
+import Button from "@/components/Button";
 
 interface ProductParams {
   params: {
@@ -16,8 +19,17 @@ const ProductPage = ({ params }: ProductParams) => {
   if (!product) return <div>Produit non trouvé</div>;
 
   return (
-    <div>
+    <div className="flex flex-col space-y-20 mt-6 mb-20 items-center ">
       <ProductCarousel product={product as Product} />
+      <div className="flex flex-col items-center space-y-12">
+        <h1 className="text-6xl">Related</h1>
+        <RelatedProductsPanel
+          relatedProductList={ProductsList as ProductListTypes}
+        />
+      </div>
+      <Link href="/category/all">
+        <Button content="Découvrir tout les produits" />
+      </Link>
     </div>
   );
 };
