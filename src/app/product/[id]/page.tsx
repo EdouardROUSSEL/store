@@ -14,12 +14,12 @@ interface ProductParams {
 const ProductPage = ({ params }: ProductParams) => {
   const { id } = params;
 
-  const product = ProductsList.find((product) => product.pageLink === id);
+  const product = ProductsList.find((product) => product.idProduct === id);
 
   if (!product) return <div>Produit non trouvé</div>;
 
   return (
-    <div className="flex flex-col space-y-20 mt-6 mb-20 items-center ">
+    <div className="flex flex-col sm:space-y-20 space-y-6 sm:mt-6 sm:mb-20 mb-6 items-center ">
       <ProductCarousel product={product as Product} />
       <div className="flex flex-col items-center space-y-12">
         <h1 className="text-6xl">Related</h1>

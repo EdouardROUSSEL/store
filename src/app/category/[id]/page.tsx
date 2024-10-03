@@ -13,12 +13,26 @@ const CategoryPage = ({ params }: ProductParams) => {
   let productsInSameCategory = ProductsList as ProductListTypes;
   if (id !== "all") {
     productsInSameCategory = ProductsList.filter(
-      (p) => p.category === id
+      (p) => p.idCategory === id
     ) as ProductListTypes;
   }
 
+  let categoryName = "";
+  switch (id) {
+    case "lamp":
+      categoryName = "lampe";
+      break;
+    case "tech":
+      categoryName = "tech";
+      break;
+    case "decoration":
+      categoryName = "décoration";
+      break;
+  }
+
   return (
-    <div>
+    <div className="flex flex-col items-center space-y-24 justify-start">
+      <h1 className="capitalize text-7xl">{categoryName}</h1>
       <ProductsPanel
         relatedProductList={productsInSameCategory as ProductListTypes}
       />

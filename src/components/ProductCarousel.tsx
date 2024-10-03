@@ -9,7 +9,7 @@ import { Product } from "@/app/types";
 
 export default function ProductCarousel({ product }: { product: Product }) {
   return (
-    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none font-roboto md:space-y-none sm:space-y-8 ">
+    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none font-roboto md:space-y-none sm:space-y-8">
       <Carousel
         className="md:w-1/2 w-full"
         opts={{
@@ -25,13 +25,13 @@ export default function ProductCarousel({ product }: { product: Product }) {
           }),
         ]}
       >
-        <CarouselContent className=" aspect-square">
+        <CarouselContent className="aspect-square">
           {product.productImage.map((imageSRC, index) => (
             <CarouselItem key={index}>
               <img
                 alt={"image " + index}
                 src={imageSRC}
-                className="object-cover md:rounded-3xl w-full h-full"
+                className="object-cover rounded-lg md:rounded-3xl w-full h-full"
               />
             </CarouselItem>
           ))}
@@ -41,7 +41,7 @@ export default function ProductCarousel({ product }: { product: Product }) {
       <div className="md:w-1/2">
         <div className="xl:pl-16 md:p-none md:pl-12 p-3 xl:max-w-[35rem] md:max-w-[29rem] md:mx-auto">
           <div className="xl:text-2xl md:text-xl text-lg pb-1">
-            {product.productBrand}
+            {product.productName}
           </div>
           <div className="font-medium md:text-4xl xl:text-5xl text-3xl">
             {product.productTitle}

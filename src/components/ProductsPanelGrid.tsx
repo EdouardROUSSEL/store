@@ -3,22 +3,26 @@
 import { ProductListTypes } from "@/app/types";
 import ProductCard from "./ProductCard";
 
-export default function RelatedProductsPanel({
+type ColNumber = {
+  xs?: number;
+  sm?: number;
+  md?: number;
+  lg?: number;
+};
+
+export default function ProductsPanelGrid({
   relatedProductList,
   flexMobil = false,
+  colNumber = { sm: 2, md: 3 },
 }: {
   relatedProductList: ProductListTypes;
   flexMobil?: boolean;
-  colNumber?: number;
+  colNumber?: ColNumber;
 }) {
   return (
-    <div className="w-screen -ml-3 sm:-ml-6 md:-ml-10 ">
+    <div className="md:w-1/2">
       <div
-        className={` ${
-          flexMobil
-            ? "md:pr-6 md:pl-10 sm:pr-10 sm:pl-6 pr-3 pl-3 flex space-x-6 w-full overflow-scroll no-scrollbar"
-            : "sm:grid-cols-3 grid-cols-2 grid gap-y-8 sm:gap-x-6 gap-x-4"
-        }`}
+        className={`grid-cols-${colNumber.sm} md:grid-cols-${colNumber.md} grid gap-y-6 sm:gap-x-6 gap-x-4`}
       >
         {relatedProductList.map((product, index) => (
           <ProductCard key={index} product={product} flexMobil={flexMobil} />

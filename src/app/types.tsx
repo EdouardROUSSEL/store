@@ -1,7 +1,7 @@
 export interface Product {
-  category: "decoration" | "lamp" | "tech";
-  pageLink: string;
-  productBrand: string;
+  idCategory: "decoration" | "lamp" | "tech";
+  idProduct: string;
+  productName: string;
   productTitle: string;
   productPrice: number;
   productDescription: string;

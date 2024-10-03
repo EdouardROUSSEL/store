@@ -1,8 +1,8 @@
 [
   {
-    "category": "lamp",
-    "pageLink": "produit1",
-    "productBrand": "Bose 1",
+    "idCategory": "lamp",
+    "idProduct": "lamp1",
+    "productName": "wavy lamp",
     "productTitle": "Noise Cancelling Headphones 700",
     "productPrice": 291,
     "productDescription": "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
@@ -15,9 +15,9 @@
     ]
   },
   {
-    "category": "tech",
-    "pageLink": "produit2",
-    "productBrand": "Bose 2",
+    "idCategory": "lamp",
+    "idProduct": "lamp2",
+    "productName": "Bose 2",
     "productTitle": "Noise Cancelling Headphones 700",
     "productPrice": 292,
     "productDescription": "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
@@ -30,9 +30,9 @@
     ]
   },
   {
-    "category": "decoration",
-    "pageLink": "produit3",
-    "productBrand": "Bose 3",
+    "idCategory": "tech",
+    "idProduct": "lamp3",
+    "productName": "Bose 3",
     "productTitle": "Noise Cancelling Headphones 700",
     "productPrice": 293,
     "productDescription": "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
@@ -45,9 +45,9 @@
     ]
   },
   {
-    "category": "lamp",
-    "pageLink": "produit4",
-    "productBrand": "Bose 4",
+    "idCategory": "tech",
+    "idProduct": "lamp4",
+    "productName": "Bose 4",
     "productTitle": "Noise Cancelling Headphones 700",
     "productPrice": 294,
     "productDescription": "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
@@ -60,9 +60,9 @@
     ]
   },
   {
-    "category": "tech",
-    "pageLink": "produit5",
-    "productBrand": "Bose 5",
+    "idCategory": "decoration",
+    "idProduct": "lamp5",
+    "productName": "Bose 5",
     "productTitle": "Noise Cancelling Headphones 700",
     "productPrice": 295,
     "productDescription": "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
@@ -75,9 +75,9 @@
     ]
   },
   {
-    "category": "decoration",
-    "pageLink": "produit6",
-    "productBrand": "Bose 6",
+    "idCategory": "decoration",
+    "idProduct": "lamp6",
+    "productName": "Bose 6",
     "productTitle": "Noise Cancelling Headphones 700",
     "productPrice": 296,
     "productDescription": "The Bose Noise Cancelling Headphones 700 deliver excellent sound and are ideal for working or traveling, when you need the most effective noise cancellation and long battery life. They are comfortable to wear for hours, and their touch controls are smooth and intuitive.",
