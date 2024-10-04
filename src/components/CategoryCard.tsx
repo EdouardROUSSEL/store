@@ -17,10 +17,10 @@ export default function CategoryCard({
     <div className="flex md:flex-row flex-col md:space-x-6 md:space-y-0 space-y-10">
       <Link
         href={path}
-        className="text-white flex flex-col justify-end p-6 aspect-square md:w-1/2 w-full bg-gray-400 rounded-3xl "
+        className="text-white flex flex-col justify-end p-6 aspect-square md:w-1/2 w-full bg-gray-300 rounded-3xl "
       >
-        <p className="text-lg">{categoryTitle}</p>
-        <p>{categoryText}</p>
+        <p className="uppercase md:text-lg">{categoryTitle}</p>
+        <p className="text-xs md:text-sm">{categoryText}</p>
         <p className="hidden md:block underline underline-offset-4 pt-2">
           Découvrir
         </p>

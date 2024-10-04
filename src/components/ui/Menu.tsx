@@ -41,7 +41,7 @@ export default function Menu() {
     >
       <div
         ref={menuRef}
-        className={`flex w-full flex-col transition-opacity transform delay-300 absolute  ${
+        className={`flex w-full flex-col transition-opacity px-3 sm:px-6 transform delay-300 absolute  ${
           scrollingDown ? "opacity-0" : "opacity-100"
         }`}
       >

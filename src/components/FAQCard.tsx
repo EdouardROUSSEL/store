@@ -6,7 +6,7 @@ export default function FAQCard({
   reponse: string;
 }) {
   return (
-    <details className="border-gray-100 border hover:border-gray-200 bg-gray-100 space-y-4 group/details rounded-3xl p-6 [&_svg]:open:-rotate-180">
+    <details className="border-gray-100 border hover:border-gray-200 bg-gray-200 space-y-4 group/details rounded-3xl p-6 [&_svg]:open:-rotate-180">
       <summary className="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden ">
         <div className="flex flex-col space-y-4 w-full">
           <div className="flex items-center justify-between w-full">
