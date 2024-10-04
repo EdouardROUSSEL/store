@@ -42,7 +42,7 @@ const CategoryPage = ({ params }: ProductParams) => {
       />
       <ProductsPanelGrid
         colNumber={{ sm: 2, md: 4 }}
-        relatedProductList={ProductsList as ProductListTypes}
+        relatedProductList={productsInSameCategory as ProductListTypes}
       />
     </div>
   );

@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import FAQCard from "@/components/FAQCard";
 import Link from "next/link";
 import FAQ from "../app/data/FAQ.json";
