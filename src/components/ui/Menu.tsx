@@ -67,7 +67,6 @@ export default function Menu() {
             <Link href="/category/decoration">Decoration</Link>
             <Link href="/category/lamp">Lamp</Link>
             <Link href="/about">About</Link>
-            <Link href="#">Instagram</Link>
           </div>
           <div className="flex-grow text-center w-1/3">
             <Link href="/">LOGO</Link>

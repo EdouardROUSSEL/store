@@ -13,37 +13,43 @@ export default function Footer() {
   );
 
   return (
-    <footer className="bg-gray-200 rounded-3xl w-full mb-6 p-6 flex-col lg:flex-row flex text-sm justify-around">
-      <Section sectionData={section1Data} />
-      <div className="lg:w-1/4 w-full flex flex-col space-y-1 mb-6 lg:mb-0">
-        <form className="flex flex-col space-y-2">
-          <label className="tracking-widest px-3">
-            SIGN UP AND GET UPDATE ON NEW PRODUCT
-          </label>
-          <div className="w-full h-10 xtext-xs border flex">
-            <input
-              placeholder="email"
-              type="email"
-              className="p-3 rounded-s-xl w-10/12 h-full outline-none"
-            ></input>
-            <button className=" px-4 text-white rounded-e-xl bg-white h-full w-2/12 items-center justify-end flex">
-              <FaArrowRight className="fill-black" />
-            </button>
-          </div>
-        </form>
-        <p className="text-xs font-light px-3">
-          En continuant, vous acceptez nos conditions générales et notre
-          politique de confidentialité.
-        </p>
-      </div>
-      <Section sectionData={section2Data} logo={true} />
-      <div className="flex flex-col lg:hidden px-3 divide-y divide-black">
-        <div className="w-full h-0 bg-black"></div>
-        {FooterData.map((data, index) => (
-          <MenuDrop question={data.title} reponse={data.subtitle} key={index} />
-        ))}
-        <div className="w-full h-0 bg-black"></div>
-      </div>
+    <footer className="px-3 sm:px-6">
+      <section className="bg-gray-200 rounded-3xl w-full mb-6 p-6 flex-col lg:flex-row flex text-sm justify-between">
+        <Section sectionData={section1Data} />
+        <div className="lg:w-[26vw] w-full flex flex-col space-y-1 mb-6 lg:mb-0">
+          <form className="flex flex-col space-y-2">
+            <label className="tracking-widest px-3">
+              SIGN UP AND GET UPDATE ON NEW PRODUCT
+            </label>
+            <div className="w-full h-10 xtext-xs border flex">
+              <input
+                placeholder="email"
+                type="email"
+                className="p-3 rounded-s-xl w-10/12 h-full outline-none"
+              ></input>
+              <button className=" px-4 text-white rounded-e-xl bg-white h-full w-2/12 items-center justify-end flex">
+                <FaArrowRight className="fill-black" />
+              </button>
+            </div>
+          </form>
+          <p className="text-xs font-light px-3">
+            En continuant, vous acceptez nos conditions générales et notre
+            politique de confidentialité.
+          </p>
+        </div>
+        <Section sectionData={section2Data} logo={true} />
+        <div className="flex flex-col lg:hidden px-3 divide-y divide-black">
+          <div className="w-full h-0 bg-black"></div>
+          {FooterData.map((data, index) => (
+            <MenuDrop
+              question={data.title}
+              reponse={data.subtitle}
+              key={index}
+            />
+          ))}
+          <div className="w-full h-0 bg-black"></div>
+        </div>
+      </section>
     </footer>
   );
 }
@@ -97,7 +103,7 @@ function Section({
   logo?: boolean;
 }) {
   return (
-    <div className="w-1/4 tracking-widest lg:flex hidden">
+    <div className="w-[28vw] tracking-widest lg:flex hidden ">
       {sectionData.map((data, index) => (
         <div className="space-y-2 w-1/3" key={index}>
           <p className="uppercase">{data.title}</p>

@@ -9,7 +9,6 @@ export default function RelatedProductsPanel({
 }: {
   relatedProductList: ProductListTypes;
   flexMobil?: boolean;
-  colNumber?: number;
 }) {
   return (
     <div className="w-full">

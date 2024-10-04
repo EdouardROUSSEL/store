@@ -13,14 +13,16 @@ type ColNumber = {
 export default function ProductsPanelGrid({
   relatedProductList,
   flexMobil = false,
-  colNumber = { sm: 2, md: 3 },
+  colNumber = { sm: 2, md: 4 },
+  className,
 }: {
   relatedProductList: ProductListTypes;
   flexMobil?: boolean;
   colNumber?: ColNumber;
+  className?: string;
 }) {
   return (
-    <div className="md:w-1/2">
+    <div className={className}>
       <div
         className={`grid-cols-${colNumber.sm} md:grid-cols-${colNumber.md} grid gap-y-6 sm:gap-x-6 gap-x-4`}
       >

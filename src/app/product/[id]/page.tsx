@@ -19,7 +19,7 @@ const ProductPage = ({ params }: ProductParams) => {
   if (!product) return <div>Produit non trouvé</div>;
 
   return (
-    <div className="flex flex-col sm:space-y-20 space-y-6 pt-20 sm:mb-20 mb-6 items-center px-3 sm:px-12">
+    <div className="flex flex-col sm:space-y-20 space-y-6 py-12 md:py-24 items-center px-3 sm:px-12">
       <ProductCarousel product={product as Product} />
       <div className="flex flex-col items-center space-y-12">
         <h1 className="text-6xl">Related</h1>

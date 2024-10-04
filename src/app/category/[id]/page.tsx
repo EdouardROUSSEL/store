@@ -1,6 +1,7 @@
 import ProductsList from "../../data/Products.json";
 import { ProductListTypes } from "@/app/types";
-import ProductsPanel from "@/components/ProductsPanel";
+import CategoryCard from "@/components/CategoryCard";
+import ProductsPanelGrid from "@/components/ProductsPanelGrid";
 
 interface ProductParams {
   params: {
@@ -31,10 +32,17 @@ const CategoryPage = ({ params }: ProductParams) => {
   }
 
   return (
-    <div className="flex flex-col items-center space-y-24 justify-start">
-      <h1 className="capitalize text-7xl">{categoryName}</h1>
-      <ProductsPanel
-        relatedProductList={productsInSameCategory as ProductListTypes}
+    <div className="flex flex-col items-center space-y-6 justify-start px-3 sm:px-12 md:py-20 py-12">
+      <CategoryCard
+        categoryText="Delightful lighting objects for every room in your home"
+        categoryTitle={categoryName}
+        path={"/category/lamp"}
+        products={ProductsList as ProductListTypes}
+        addButton={false}
+      />
+      <ProductsPanelGrid
+        colNumber={{ sm: 2, md: 4 }}
+        relatedProductList={ProductsList as ProductListTypes}
       />
     </div>
   );

@@ -18,12 +18,12 @@ export default function ProductCard({
       <div className="relative">
         <img
           src={product.productImage[0]}
-          className="aspect-square rounded-lg md:rounded-3xl transition-transform duration-300 hover:opacity-0 transform object-cover "
+          className="aspect-square rounded-3xl transition-transform duration-300 hover:opacity-0 transform object-cover "
           alt={product.productTitle}
         />
         <img
           src={product.productImage[1]}
-          className="aspect-square rounded-lg md:rounded-3xl top-0 left-0 absolute transition-opacity duration-300 opacity-0 object-cover transform hover:opacity-100"
+          className="aspect-square rounded-3xl top-0 left-0 absolute transition-opacity duration-300 opacity-0 object-cover transform hover:opacity-100"
           alt={product.productTitle}
         />
       </div>
