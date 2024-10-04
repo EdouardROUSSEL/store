@@ -10,7 +10,7 @@ export default function FAQCard({
       <summary className="flex cursor-pointer list-none justify-between [&::-webkit-details-marker]:hidden ">
         <div className="flex flex-col space-y-4 w-full">
           <div className="flex items-center justify-between w-full">
-            <div className="px-4 py-1 bg-white w-fit rounded-full">
+            <div className="px-4 py-1 bg-white w-fit rounded-full text-sm md:text-base">
               Question
             </div>
             <svg
@@ -32,7 +32,7 @@ export default function FAQCard({
               </g>
             </svg>
           </div>
-          <p className="text-xl">{question}</p>
+          <p className="md:text-xl">{question}</p>
         </div>
       </summary>
       <article className="p-4 bg-white rounded-xl">{reponse}</article>
