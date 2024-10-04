@@ -5,6 +5,7 @@ import Products from "./data/Products.json";
 import { ProductListTypes } from "./types";
 import ProductsPanel from "@/components/ProductsPanel";
 import CategoryCard from "@/components/CategoryCard";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -98,9 +99,12 @@ export default function Page() {
       </section>
 
       <section className="md:flex flex flex-col md:flex-row md:gap-6 pb-6 aspect-[8/10] w-full max-h-[50vh] md:max-h-[35vh] px-3 sm:px-6">
-        <img
-          src="https://creme-atelier.com/cdn/shop/files/300324_CremeAtelier0528.jpg?v=1713947074"
+        <Image
+          width={500}
+          height={500}
+          src="/webp/1.webp"
           className="md:w-2/3 rounded-3xl object-cover hidden md:block h-auto"
+          alt={"1"}
         />
         <div className="space-y-2 md:w-1/3 overflow-y-scroll no-scrollbar h-auto">
           {FAQ.map((data, index) => (

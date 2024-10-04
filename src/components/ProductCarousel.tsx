@@ -4,6 +4,7 @@ import Button from "./Button";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/Carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-Fade";
+import Image from "next/image";
 
 import { Product } from "@/app/types";
 
@@ -28,7 +29,9 @@ export default function ProductCarousel({ product }: { product: Product }) {
         <CarouselContent className="aspect-square">
           {product.productImage.map((imageSRC, index) => (
             <CarouselItem key={index}>
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt={"image " + index}
                 src={imageSRC}
                 className="object-cover rounded-lg md:rounded-3xl w-full h-full"

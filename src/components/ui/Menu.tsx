@@ -1,7 +1,7 @@
 "use client";
 import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,30 +9,30 @@ export default function Menu() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
-      // Vérifie si l'utilisateur défile vers le bas
-      setScrollingDown(currentScrollY > lastScrollY && currentScrollY > 40); // Ajoute un seuil pour éviter les petites transitions
+      setScrollingDown(currentScrollY > lastScrollY && currentScrollY > 40);
       setLastScrollY(currentScrollY);
       setIsOpen(false);
     }
-  };
+  }, [lastScrollY]);
 
-  const handleClickOutside = (event: MouseEvent) => {
+  const handleClickOutside = useCallback((event: MouseEvent) => {
     if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
       setIsOpen(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("click", handleClickOutside); // Ajoute l'écouteur de clics
+    window.addEventListener("click", handleClickOutside);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("click", handleClickOutside); // Retire l'écouteur lors du démontage
+      window.removeEventListener("click", handleClickOutside);
     };
-  }, [lastScrollY]);
+  }, [handleScroll, handleClickOutside]);
 
   return (
     <div

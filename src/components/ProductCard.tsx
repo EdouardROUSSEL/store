@@ -1,5 +1,6 @@
 import { Product } from "@/app/types";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProductCard({
   product,
@@ -16,12 +17,16 @@ export default function ProductCard({
       href={`/product/${product.idProduct}`}
     >
       <div className="relative">
-        <img
+        <Image
+          width={500}
+          height={500}
           src={product.productImage[0]}
           className="aspect-square rounded-3xl transition-transform duration-300 hover:opacity-0 transform object-cover "
           alt={product.productTitle}
         />
-        <img
+        <Image
+          width={500}
+          height={500}
           src={product.productImage[1]}
           className="aspect-square rounded-3xl top-0 left-0 absolute transition-opacity duration-300 opacity-0 object-cover transform hover:opacity-100"
           alt={product.productTitle}
