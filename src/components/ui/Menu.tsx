@@ -36,7 +36,7 @@ export default function Menu() {
 
   return (
     <div
-      className="sticky z-50 top-0 py-3 
+      className="sticky z-50 top-0 py-3
       w-full text-sm md:text-base items-center"
     >
       <div

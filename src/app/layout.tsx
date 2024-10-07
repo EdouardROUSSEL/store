@@ -15,10 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="flex flex-col justify-between min-h-screen bg-[#efefef]">
-        <Menu />
-        {children}
-        <Footer />
+      <body className="font-roboto bg-[#efefef] flex justify-center">
+        <div className="justify-between flex flex-col w-full max-w-screen-2xl min-h-screen">
+          <Menu />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

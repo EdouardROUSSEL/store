@@ -32,7 +32,7 @@ const CategoryPage = ({ params }: ProductParams) => {
   }
 
   return (
-    <div className="flex flex-col items-center space-y-6 justify-start px-3 sm:px-12 md:py-20 py-12">
+    <div className="flex flex-col items-center space-y-6 justify-start px-3 sm:px-6 md:py-20 py-12">
       <CategoryCard
         categoryText="Delightful lighting objects for every room in your home"
         categoryTitle={categoryName}
