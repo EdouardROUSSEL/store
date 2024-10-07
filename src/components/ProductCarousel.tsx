@@ -10,9 +10,9 @@ import { Product } from "@/app/types";
 
 export default function ProductCarousel({ product }: { product: Product }) {
   return (
-    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none md:space-y-none sm:space-y-8 ">
+    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none md:space-y-none space-y-4 ">
       <Carousel
-        className="md:w-1/2 w-full aspect-square"
+        className="md:w-1/2 w-full aspect-square rounded-lg md:rounded-3xl overflow-hidden"
         opts={{
           loop: true,
         }}
@@ -26,9 +26,9 @@ export default function ProductCarousel({ product }: { product: Product }) {
           }),
         ]}
       >
-        <CarouselContent className="aspect-square">
+        <CarouselContent className="aspect-square ">
           {product.productImage.map((imageSRC, index) => (
-            <CarouselItem key={index} className="aspect-square">
+            <CarouselItem key={index} className="aspect-square ">
               <Image
                 width={1000}
                 height={1000}

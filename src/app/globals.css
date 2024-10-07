@@ -130,12 +130,12 @@
 @keyframes scaleDown {
   0% {
     width: 110%;
-    height: 120vh; /* Hauteur initiale */
+    height: 120vh;
     transform: translate(-5vw, -30vh);
   }
   100% {
     width: 100%;
-    height: 82vh; /* Hauteur finale par défaut pour petits écrans */
+    height: 82vh;
     transform: translate(0, 0);
   }
 }
@@ -145,12 +145,12 @@
   @keyframes scaleDown {
     0% {
       width: 110%;
-      height: 120vh; /* Hauteur initiale inchangée */
+      height: 120vh;
       transform: translate(-5vw, -30vh);
     }
     100% {
       width: 100%;
-      height: 95vh; /* Hauteur finale pour les écrans larges */
+      height: 95vh;
       transform: translate(0, 0);
     }
   }
@@ -160,14 +160,8 @@
 @media (min-width: 1536px) {
   @keyframes scaleDown {
     0% {
-      width: 110%;
-      height: 120vh; /* Hauteur initiale inchangée */
-      transform: translate(-5vw, -30vh);
     }
     100% {
-      width: 100%;
-      height: 97vh; /* Hauteur finale pour les très grands écrans */
-      transform: translate(0, 0);
     }
   }
 }
@@ -190,7 +184,13 @@
 .text-hidden {
   opacity: 0;
   animation: slideUpFadeIn 0.8s ease-out forwards;
-  animation-delay: 2.5s;
+  animation-delay: 2.5s; /* Délai par défaut */
+}
+
+@media (min-width: 1024px) {
+  .text-hidden {
+    animation-delay: 1s;
+  }
 }
 
 @keyframes borderRadiusAnimation {
@@ -204,6 +204,13 @@
 
 .animate-border-radius {
   animation: borderRadiusAnimation 1.2s ease-in-out forwards 1.5s; /* Appliquer l'animation */
+}
+
+@media (min-width: 1024px) {
+  /* Taille lg par défaut dans Tailwind */
+  .animate-border-radius {
+    animation-delay: 0.5s; /* Délai de 1 seconde pour les écrans lg et plus grands */
+  }
 }
 
 @keyframes slideUpFadeIn {

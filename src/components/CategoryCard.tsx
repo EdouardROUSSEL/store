@@ -16,7 +16,7 @@ export default function CategoryCard({
   addButton?: boolean;
 }) {
   return (
-    <div className="flex md:flex-row flex-col md:space-x-6 md:space-y-0 space-y-10">
+    <div className="flex md:flex-row flex-col md:space-x-6 md:space-y-0 space-y-10 w-full">
       <Link
         href={path}
         className="text-white flex flex-col justify-end p-6 aspect-square md:w-1/2 w-full bg-gray-300 rounded-3xl "
@@ -30,8 +30,7 @@ export default function CategoryCard({
         )}
       </Link>
       <ProductsPanelGrid
-        className="sm:w-1/2"
-        colNumber={{ sm: 2, md: 2 }}
+        className="md:w-1/2"
         relatedProductList={products.slice(0, 4) as ProductListTypes}
       />
     </div>

@@ -1,7 +1,7 @@
 import ProductsList from "../../data/Products.json";
 import { ProductListTypes } from "@/app/types";
 import CategoryCard from "@/components/CategoryCard";
-import ProductsPanelGrid from "@/components/ProductsPanelGrid";
+import ProductsPanelGrid24 from "@/components/ProductsPanelGrid24";
 
 interface ProductParams {
   params: {
@@ -40,8 +40,8 @@ const CategoryPage = ({ params }: ProductParams) => {
         products={ProductsList as ProductListTypes}
         addButton={false}
       />
-      <ProductsPanelGrid
-        colNumber={{ sm: 2, md: 4 }}
+
+      <ProductsPanelGrid24
         relatedProductList={productsInSameCategory as ProductListTypes}
       />
     </div>
