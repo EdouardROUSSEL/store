@@ -10,9 +10,9 @@ import Image from "next/image";
 export default function Page() {
   return (
     <div className="space-y-12">
-      <section className="w-full flex h-[82vh] lg:h-[95vh] 2xl:h-[97vh] pt-10 px-3 sm:px-6">
+      <section className="w-full flex h-[82vh] lg:h-[95vh] 2xl:h-[97vh] pt-10 px-3 sm:px-6 animate-scale-down">
         <div
-          className="rounded-[24px] bg-gray-300 w-full flex p-6 md:p-10 items-end animate-scale-down"
+          className=" bg-gray-300 w-full flex p-6 md:p-10 items-end animate-border-radius"
           style={{
             backgroundImage:
               "url(https://i.pinimg.com/564x/67/fd/c1/67fdc13d2c33c32f5793129037ee694a.jpg)",
