@@ -34,7 +34,8 @@ export default function ProductCarousel({ product }: { product: Product }) {
                 height={1000}
                 alt={"image " + index}
                 src={imageSRC}
-                className="rounded-lg md:rounded-3xl w-full h-full object-cover"
+                objectFit="cover"
+                className="rounded-lg md:rounded-3xl w-full h-full"
               />
             </CarouselItem>
           ))}
