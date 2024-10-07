@@ -10,9 +10,9 @@ import Image from "next/image";
 export default function Page() {
   return (
     <div className="space-y-12">
-      <section className="w-full flex h-[96vh] lg:h-[97vh] pt-10 px-3 sm:px-6">
+      <section className="w-full flex h-[82vh] lg:h-[97vh] pt-10 px-3 sm:px-6">
         <div
-          className="rounded-[24px] bg-gray-300  w-full flex p-6 md:p-10 items-end animate-scale-down"
+          className="rounded-[24px] bg-gray-300 w-full flex p-6 md:p-10 items-end animate-scale-down"
           style={{
             backgroundImage:
               "url(https://i.pinimg.com/564x/67/fd/c1/67fdc13d2c33c32f5793129037ee694a.jpg)",
@@ -42,7 +42,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="px-3 sm:px-6 w-full">
+      <section className=" sm:px-6 w-full">
         <ProductsPanel
           flexMobil={true}
           relatedProductList={Products.slice(0, 5) as ProductListTypes}

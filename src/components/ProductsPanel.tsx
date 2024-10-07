@@ -13,7 +13,7 @@ export default function RelatedProductsPanel({
   return (
     <div className="w-full">
       <div
-        className={` ${
+        className={` px-3 sm:px-0 ${
           flexMobil
             ? "flex space-x-6 w-full overflow-scroll no-scrollbar"
             : "sm:grid-cols-3 grid-cols-2 grid gap-y-8 sm:gap-x-6 gap-x-4"
