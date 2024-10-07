@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Page() {
   return (
     <div className="space-y-12">
-      <section className="w-full flex h-[82vh] lg:h-[97vh] pt-10 px-3 sm:px-6">
+      <section className="w-full flex h-[82vh] lg:h-[95vh] 2xl:h-[97vh] pt-10 px-3 sm:px-6">
         <div
           className="rounded-[24px] bg-gray-300 w-full flex p-6 md:p-10 items-end animate-scale-down"
           style={{
