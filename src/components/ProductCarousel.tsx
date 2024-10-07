@@ -3,7 +3,7 @@ import React from "react";
 import Button from "./Button";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/Carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-Fade";
+// import Fade from "embla-carousel-Fade";
 import Image from "next/image";
 
 import { Product } from "@/app/types";
@@ -17,7 +17,7 @@ export default function ProductCarousel({ product }: { product: Product }) {
           loop: true,
         }}
         plugins={[
-          Fade({ active: true }),
+          // Fade({ active: true }),
           Autoplay({
             delay: 5000,
             stopOnMouseEnter: true,
