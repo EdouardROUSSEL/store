@@ -3,7 +3,7 @@ import React from "react";
 import Button from "./Button";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/Carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-Fade";
+import Fade from "embla-carousel-fade";
 import Image from "next/image";
 
 import { Product } from "@/app/types";
