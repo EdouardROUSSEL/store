@@ -156,16 +156,6 @@
   }
 }
 
-/* Pour les très grands écrans (2xl) */
-@media (min-width: 1536px) {
-  @keyframes scaleDown {
-    0% {
-    }
-    100% {
-    }
-  }
-}
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -176,9 +166,22 @@
 }
 
 .animate-scale-down {
+  width: 110%;
+  height: 120vh;
+  transform: translate(-5vw, -30vh);
   opacity: 0;
   animation: fade 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.25s,
     scaleDown 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
+}
+
+@media (min-width: 1024px) {
+  .animate-scale-down {
+    width: 110%;
+    transform: translate(-5vw, -30vh);
+    height: 120vh;
+    width: 100%; /* Largeur finale pour grands écrans */
+    height: 95vh; /* Hauteur finale pour grands écrans */
+  }
 }
 
 .text-hidden {
