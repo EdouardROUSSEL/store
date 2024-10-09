@@ -34,8 +34,8 @@ export default function ProductCard({
       </div>
 
       <div>
-        <p className="font-wider font-light">{product.productName}</p>
-        <p className="text-xs">${product.productPrice}</p>
+        <h3 className="text-lg capitalize">{product.productName}</h3>
+        <p className="text-sm">${product.productPrice}</p>
       </div>
     </Link>
   );

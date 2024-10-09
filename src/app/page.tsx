@@ -21,7 +21,7 @@ export default function Page() {
           }}
         >
           <div className="md:w-1/2 w-full text-hidden text-white">
-            <p className=" text-xl uppercase">description du produit</p>
+            <h2 className="text-xl uppercase">description du produit</h2>
             <p className="underline underline-offset-4">
               Découvrir les produits
             </p>
@@ -30,10 +30,10 @@ export default function Page() {
       </section>
       <section className="md:px-6">
         <div className="text-white flex flex-col space-y-2 w-screen md:rounded-3xl md:w-full aspect-[5/3] justify-center items-center md:aspect-[5/2] bg-gray-300">
-          <p className="text-2xl md:text-3xl text-center w-4/5 md:w-1/2">
+          <h1 className="text-2xl md:text-3xl text-center w-4/5 md:w-1/2">
             Design et produit des lampes, décoration et accessoire à Paris,
             France .
-          </p>
+          </h1>
           <Link href={"/about"}>
             <p className="text-sm underline font-light place-self-start underline-offset-4">
               A propos
@@ -50,10 +50,10 @@ export default function Page() {
       </section>
       <section className="md:px-6">
         <div className="text-white flex flex-col space-y-2 w-screen md:rounded-3xl md:w-full aspect-[5/3] justify-center items-center md:aspect-[5/2] bg-gray-300">
-          <p className="text-2xl md:text-3xl text-center w-4/5 md:w-1/2">
+          <h1 className="text-2xl md:text-3xl text-center w-4/5 md:w-1/2">
             We design, manufacture, assemble, and ship all of our products on a
             made-to-order basis from our small studio in Paris, France
-          </p>{" "}
+          </h1>
         </div>
       </section>
       <section className="px-3 sm:px-6 w-full">
@@ -69,10 +69,10 @@ export default function Page() {
           href={"/category/tech"}
           className="flex justify-end flex-col w-full md:w-full aspect-square bg-gray-300 md:rounded-3xl text-white p-6 md:aspect-[5/2] rounded-3xl"
         >
-          <p className="uppercase md:text-lg">Dock ER06</p>
-          <p className="text-xs md:text-sm">
+          <h2 className="uppercase text-lg md:text-xl">Dock ER06</h2>
+          <h3 className=" md:text-lg w-2/3">
             We design, manufacture, assemble, and ship all of our products
-          </p>
+          </h3>
           <p className="underline underline-offset-4 hidden md:block">
             Découvrir
           </p>
@@ -89,7 +89,7 @@ export default function Page() {
           }}
         >
           <div className="text-center text-white space-y-2 md:w-1/3 w-2/3">
-            <p className="uppercase font-light text-sm  ">Coming soon</p>
+            <p className="uppercase font-light text-sm">Coming soon</p>
             <p className="text-3xl md:text-5xl">Curated by</p>
             <p className="font-light md:text-xl md:font-normal ">
               Creators and exports share products that enrich their lives?

@@ -14,7 +14,9 @@ export default function ProductsPanelGrid({
 }) {
   return (
     <div className={className}>
-      <div className={`grid-cols-2 md:grid-cols-4 grid sm:gap-x-6 gap-x-4`}>
+      <div
+        className={`grid-cols-2 md:grid-cols-4 grid gap-y-6 sm:gap-x-6 gap-x-4`}
+      >
         {relatedProductList.map((product, index) => (
           <ProductCard key={index} product={product} flexMobil={flexMobil} />
         ))}

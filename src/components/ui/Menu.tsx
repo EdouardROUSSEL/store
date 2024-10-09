@@ -62,17 +62,27 @@ export default function Menu() {
             />
           </button>
           <div className="w-1/3 flex-row space-x-6 hidden lg:flex">
-            <Link href="/category/all">All</Link>
-            <Link href="/category/tech">Tech</Link>
-            <Link href="/category/decoration">Decoration</Link>
-            <Link href="/category/lamp">Lamp</Link>
-            <Link href="/about">About</Link>
+            <Link href="/category/all">
+              <h3>All</h3>
+            </Link>
+            <Link href="/category/tech">
+              <h3>Tech</h3>
+            </Link>
+            <Link href="/category/decoration">
+              <h3>Decoration</h3>
+            </Link>
+            <Link href="/category/lamp">
+              <h3>Lampe</h3>
+            </Link>
+            <Link href="/about">
+              <h3>About</h3>
+            </Link>
           </div>
-          <div className="flex-grow text-center w-1/3">
+          <h1 className="flex-grow text-center w-1/3">
             <Link href="/">LOGO</Link>
-          </div>
+          </h1>
           <Link href="#" className="w-1/3 text-end">
-            Panier
+            <h3>Panier</h3>
           </Link>
         </div>
 
@@ -88,35 +98,35 @@ export default function Menu() {
                 onClick={() => setIsOpen(!isOpen)}
                 className=""
               >
-                All
+                <h3>All</h3>
               </Link>
               <Link
                 href="/category/tech"
                 onClick={() => setIsOpen(!isOpen)}
                 className=""
               >
-                Tech
+                <h3>Tech</h3>
               </Link>
               <Link
                 href="/category/decoration"
                 onClick={() => setIsOpen(!isOpen)}
                 className=""
               >
-                Decoration
+                <h3>Decoration</h3>
               </Link>
               <Link
                 href="/category/lamp"
                 onClick={() => setIsOpen(!isOpen)}
                 className=""
               >
-                Lamp
+                <h3>Lampe</h3>
               </Link>
               <Link
                 href="/about"
                 onClick={() => setIsOpen(!isOpen)}
                 className=""
               >
-                About
+                <h3>About</h3>
               </Link>
             </span>
           )}

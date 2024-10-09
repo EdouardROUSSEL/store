@@ -32,7 +32,7 @@ export default function FAQCard({
               </g>
             </svg>
           </div>
-          <p className="md:text-xl">{question}</p>
+          <h3 className="md:text-xl">{question}</h3>
         </div>
       </summary>
       <article className="p-4 bg-white rounded-xl">{reponse}</article>

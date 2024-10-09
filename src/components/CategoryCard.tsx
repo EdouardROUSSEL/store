@@ -21,8 +21,8 @@ export default function CategoryCard({
         href={path}
         className="text-white flex flex-col justify-end p-6 aspect-square md:w-1/2 w-full bg-gray-300 rounded-3xl "
       >
-        <p className="uppercase md:text-lg">{categoryTitle}</p>
-        <p className="text-xs md:text-sm">{categoryText}</p>
+        <h2 className="uppercase text-xl md:text-lg">{categoryTitle}</h2>
+        <h3 className="text-lg md:text-xl w-2/3">{categoryText}</h3>
         {addButton && (
           <p className="hidden md:block underline underline-offset-4 pt-2">
             Découvrir

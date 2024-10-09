@@ -10,9 +10,9 @@ import { Product } from "@/app/types";
 
 export default function ProductCarousel({ product }: { product: Product }) {
   return (
-    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none md:space-y-none space-y-4 ">
+    <div className="w-full md:flex flex-col md:flex-row items-center justify-center sm:max-w-[480px] md:max-w-none md:space-y-none space-y-2 ">
       <Carousel
-        className="md:w-1/2 w-full aspect-square rounded-lg md:rounded-3xl overflow-hidden"
+        className="md:w-1/2 w-full aspect-[4/5] md:aspect-square rounded-lg md:rounded-3xl overflow-hidden"
         opts={{
           loop: true,
         }}
@@ -26,15 +26,15 @@ export default function ProductCarousel({ product }: { product: Product }) {
           }),
         ]}
       >
-        <CarouselContent className="aspect-square ">
+        <CarouselContent className="md:aspect-square aspect-[4/5]">
           {product.productImage.map((imageSRC, index) => (
-            <CarouselItem key={index} className="aspect-square ">
+            <CarouselItem key={index} className="md:aspect-square aspect-[4/5]">
               <Image
                 width={1000}
                 height={1000}
                 alt={"image " + index}
                 src={imageSRC}
-                className="rounded-lg md:rounded-3xl object-cover aspect-square"
+                className="rounded-3xl object-cover md:aspect-square aspect-[4/5]"
               />
             </CarouselItem>
           ))}
@@ -43,20 +43,17 @@ export default function ProductCarousel({ product }: { product: Product }) {
 
       <div className="md:w-1/2">
         <div className="xl:pl-16 md:p-none md:pl-12 p-3 xl:max-w-[35rem] md:max-w-[29rem] md:mx-auto">
-          <div className="xl:text-2xl md:text-xl text-lg pb-1">
+          <h2 className="capitalize md:text-4xl xl:text-5xl text-3xl">
             {product.productName}
-          </div>
-          <div className="font-medium md:text-4xl xl:text-5xl text-3xl">
-            {product.productTitle}
-          </div>
-          <div className="md:text-xl xl:text-2xl text-lg font-normal pt-4 pb-6">
+          </h2>
+          <p className="md:text-xl xl:text-2xl text-lg font-normal pt-0 md:pt-6 pb-6">
             ${product.productPrice}
-          </div>
+          </p>
           <div className="flex flex-col-reverse  md:flex-col space-y-8 space-y-reverse md:space-y-8">
-            <div className=" md:text-lg xl:text-xl text-base">
+            <p className=" md:text-lg xl:text-xl text-base">
               {product.productDescription}
-            </div>
-            <Button content="Order" />
+            </p>
+            <Button content="Order" className="w-full md:w-fit" />
           </div>
         </div>
       </div>
