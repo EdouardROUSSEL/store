@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Erode";
-  src: url("/fonts/erode/Erode-Regular.woff2") format("woff2"),
-    url("/fonts/erode/Erode-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Bevellier";
-  src: url("/fonts/Bevellier/Bevellier-medium.woff2") format("woff2"),
-    url("/fonts/Bevellier/Bevellier-medium.woff") format("woff");
+  font-family: "bevellier";
+  src: url("/fonts/bevellier/Bevellier-Medium.woff2") format("woff2"),
+    url("/fonts/bevellier/Bevellier-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -28,16 +20,16 @@
 
 @font-face {
   font-family: "plein";
-  src: url("/fonts/plein/Plein-medium.woff2") format("woff2"),
-    url("/fonts/plein/Plein-medium.woff") format("woff");
+  src: url("/fonts/plein/Plein-Medium.woff2") format("woff2"),
+    url("/fonts/plein/Plein-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "supreme";
-  src: url("/fonts/supreme/supreme-Regular.woff2") format("woff2"),
-    url("/fonts/supreme/supreme-Regular.woff") format("woff");
+  src: url("/fonts/supreme/Supreme-Regular.woff2") format("woff2"),
+    url("/fonts/supreme/Supreme-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -58,7 +50,7 @@ h2 {
 
 h3 {
   line-height: 20px;
-  font-family: "Bevellier", sans-serif;
+  font-family: "bevellier", sans-serif;
   letter-spacing: px;
 }
 
